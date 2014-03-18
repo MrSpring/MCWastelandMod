@@ -6,6 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.IWorldGenerator;
+import dk.mrspring.wasteland.ModInfo;
 
 public class RuinRuined extends Ruin implements IWorldGenerator
 {
@@ -53,10 +54,12 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 		 *	  	  V X-
 		 */
 		
-		if(material1.isSolid()/*material1.isSolid() && material2.isSolid() && material3.isSolid() && material4.isSolid() && material5.isSolid() && material6.isSolid() && material7.isSolid() && material8.isSolid() && material9.isSolid() && material10.isSolid() && material11.isSolid() && material12.isSolid() && material13.isSolid() && material14.isSolid() && material15.isSolid() && material16.isSolid() && material17.isSolid() && material18.isSolid() && material19.isSolid() && material20.isSolid() && material21.isSolid() && material22.isSolid() && material23.isSolid() && material24.isSolid() && material25.isSolid() && world.getHeightValue(x + 4, z) == y && world.getHeightValue(x, z + 5) == y && world.getHeightValue(x - 5, z) == y && world.getHeightValue(x, z - 4) == y*/)
+		if(material1.isSolid() && material2.isSolid() && material3.isSolid() && material4.isSolid() && material5.isSolid() && material6.isSolid() && material7.isSolid() && material8.isSolid() && material9.isSolid() && material10.isSolid() && material11.isSolid() && material12.isSolid() && material13.isSolid() && material14.isSolid() && material15.isSolid() && material16.isSolid() && material17.isSolid() && material18.isSolid() && material19.isSolid() && material20.isSolid() && material21.isSolid() && material22.isSolid() && material23.isSolid() && material24.isSolid() && material25.isSolid() && world.getHeightValue(x + 4, z) == y && world.getHeightValue(x, z + 5) == y && world.getHeightValue(x - 5, z) == y && world.getHeightValue(x, z - 4) == y)
 		{
+			System.out.println("Generating Ruined at: " + ModInfo.getCoordAsString(x, y, z));
+			
 			int xCoord = x;
-			int yCoord = y + 10;
+			int yCoord = y;
 			int zCoord = z;
 			
 			/*	  	  A X+
@@ -590,7 +593,132 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			world.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
 			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord - 4, 2, 2);
 			world.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.stonebrick);
+			world.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord - 2, 2, 2);
+			world.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord - 1, 2, 2);
+			world.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord + 0, 2, 2);
+			world.setBlock(xCoord - 2, yCoord, zCoord + 4, Blocks.stonebrick);
+			world.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
 			
+			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
+			world.setBlock(xCoord - 3, yCoord, zCoord - 3, Blocks.stonebrick);
+			world.setBlock(xCoord - 3, yCoord, zCoord - 2, Blocks.stonebrick);
+			world.setBlock(xCoord - 3, yCoord, zCoord - 1, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord - 1, 2, 2);
+			world.setBlock(xCoord - 3, yCoord, zCoord + 0, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 0, 2, 2);
+			world.setBlock(xCoord - 3, yCoord, zCoord + 3, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 3, 2, 2);
+			world.setBlock(xCoord - 3, yCoord, zCoord + 4, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 4, 2, 2);
+			world.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 5, 2, 2);
+			
+			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord - 3, 2, 2);
+			world.setBlock(xCoord - 4, yCoord, zCoord - 2, Blocks.stonebrick);
+			world.setBlock(xCoord - 4, yCoord, zCoord - 1, Blocks.stonebrick);
+			world.setBlock(xCoord - 4, yCoord, zCoord + 0, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 0, 2, 2);
+			world.setBlock(xCoord - 4, yCoord, zCoord + 1, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 1, 2, 2);
+			world.setBlock(xCoord - 4, yCoord, zCoord + 3, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 3, 2, 2);
+			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
+			
+			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 2, 2, 2);
+			world.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
+			world.setBlock(xCoord - 5, yCoord, zCoord + 0, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 0, 2, 2);
+			world.setBlock(xCoord - 5, yCoord, zCoord + 1, Blocks.stonebrick);
+			world.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 3, 2, 2);
+			
+			/*	  	  A X+
+			 *		  |
+			 *  Z- <-- --> Z+
+			 *	  	  |
+			 *	  	  V X-
+			 */
+			
+			// Layer 9 generation
+			
+			yCoord++;
+			
+			world.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord - 1, 2, 2);
+			
+			world.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
+			
+			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord - 4, 2, 2);
+			
+			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord - 3, 2, 2);
+			world.setBlock(xCoord - 4, yCoord, zCoord - 2, Blocks.chest);
+			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 4, 2, 2);
+			
+			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			world.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 1, 2, 2);
+			world.setBlock(xCoord - 5, yCoord, zCoord + 0, Blocks.stonebrick);
+			
+			/*	  	  A X+
+			 *		  |
+			 *  Z- <-- --> Z+
+			 *	  	  |
+			 *	  	  V X-
+			 */
+			
+			// Layer 10 generation
+			
+			yCoord++;
+			
+			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
+			
+			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
+			
+			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 2, 2, 2);
+			world.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
+			
+			/*	  	  A X+
+			 *		  |
+			 *  Z- <-- --> Z+
+			 *	  	  |
+			 *	  	  V X-
+			 */
+			
+			// Layer 11 generation
+			
+			yCoord++;
+			
+			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord - 3, 2, 2);
+			
+			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 2, 2, 2);
+			
+			/*	  	  A X+
+			 *		  |
+			 *  Z- <-- --> Z+
+			 *	  	  |
+			 *	  	  V X-
+			 */
+			
+			// Layer 12 generation
+			
+			yCoord++;
+			
+			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
+			
+			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			
+			return true;
 		}
 		
 		return false;

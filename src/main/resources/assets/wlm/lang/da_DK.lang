@@ -1,5 +1,4 @@
 generator.wasteland=Wasteland
 generator.wasteland.info=Du bruger en prøve version af moden. Fejl kan forekomme.
-tile.test_block.name=Test Blok
-tile.toaster.name=Toaster
 itemGroup.tabWastelandBlocks=Wasteland Blokke
+tile.tv.name=Fjernsyn

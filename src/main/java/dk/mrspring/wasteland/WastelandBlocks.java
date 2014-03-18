@@ -5,6 +5,5 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class WastelandBlocks
 {
-	public static final Block testBlock = GameRegistry.findBlock(ModInfo.modid, "test_block");
-	public static final Block toaster = GameRegistry.findBlock(ModInfo.modid, "toaster");
+	public static final Block tv = GameRegistry.findBlock(ModInfo.modid, "tv");
 }

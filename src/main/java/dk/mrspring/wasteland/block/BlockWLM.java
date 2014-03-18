@@ -27,6 +27,6 @@ public class BlockWLM extends Block
 	
 	public static void load()
 	{
-		GameRegisterer.registerBlock(new BlockWLM(Material.rock, "test_block").setCreativeTab(Wasteland.tabWastelandBlocks));
+		GameRegisterer.registerBlock(new BlockTV(Material.circuits, "tv").setCreativeTab(Wasteland.tabWastelandBlocks));
 	}
 }

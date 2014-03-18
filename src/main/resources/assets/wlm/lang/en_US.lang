@@ -1,5 +1,4 @@
 generator.wasteland=Wasteland
 generator.wasteland.info=You are using a development version of the mod. Bugs may occur.
-tile.test_block.name=Test Block
-tile.toaster.name=Toaster
 itemGroup.tabWastelandBlocks=Wasteland Blocks
+tile.tv.name=Television

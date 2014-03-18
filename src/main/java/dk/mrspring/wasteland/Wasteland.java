@@ -35,7 +35,7 @@ public class Wasteland
 	{
 		@Override
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(WastelandBlocks.testBlock);
+			return Item.getItemFromBlock(Blocks.dirt);
 		}
 	};
 	

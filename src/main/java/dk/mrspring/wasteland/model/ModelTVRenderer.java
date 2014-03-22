@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 
 public class ModelTVRenderer extends TileEntitySpecialRenderer
 {
@@ -28,6 +29,13 @@ public class ModelTVRenderer extends TileEntitySpecialRenderer
 			
 			GL11.glPushMatrix();
 				GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
+				
+				int metadata = 0;
+				
+				metadata = var1.getWorldObj().getBlockMetadata(var1.xCoord, var1.yCoord, var1.zCoord);
+				
+				GL11.glRotatef((metadata * 90F), 0, 1.0F, 0);
+				
 				this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 			GL11.glPopMatrix();
 		GL11.glPopMatrix();

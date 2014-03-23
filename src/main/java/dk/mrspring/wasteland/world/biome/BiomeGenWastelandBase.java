@@ -12,6 +12,7 @@ import net.minecraftforge.common.BiomeDictionary;
 public class BiomeGenWastelandBase extends BiomeGenBase
 {
 	public static final BiomeGenBase.Height height_Wasteland = new BiomeGenBase.Height(0.1F, 0.05F);
+	public static final BiomeGenBase.Height height_DriedOcean = new BiomeGenBase.Height(0.1F, 0.05F);
 	
 	private static int lastID = 0;
 	public static BiomeGenBase[] wastelandBiomes = new BiomeGenBase[16];
@@ -33,6 +34,7 @@ public class BiomeGenWastelandBase extends BiomeGenBase
 	public static void load()
 	{
 		GameRegisterer.registerBiome(new BiomeGenApocalypse(ModConfig.wastelandBiomeID, "Wasteland", height_Wasteland), BiomeDictionary.Type.WASTELAND);
+		GameRegisterer.registerBiome(new BiomeGenDriedOcean(ModConfig.driedOceanID, "dried_ocean", height_DriedOcean), BiomeDictionary.Type.WASTELAND);
 	}
 	
 	public BiomeGenWastelandBase setTopBlock(Block block)

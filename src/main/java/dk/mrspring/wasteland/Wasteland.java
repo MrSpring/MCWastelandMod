@@ -2,13 +2,11 @@ package dk.mrspring.wasteland;
 
 import java.io.File;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.world.WorldType;
-import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.config.Configuration;
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.Mod;
@@ -19,22 +17,24 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import dk.mrspring.wasteland.block.BlockWLM;
+import dk.mrspring.wasteland.item.ItemWLM;
 import dk.mrspring.wasteland.ruin.Ruin;
 import dk.mrspring.wasteland.ruin.RuinConfig;
 import dk.mrspring.wasteland.tileentity.TileEntityTV;
 import dk.mrspring.wasteland.world.WorldTypeWasteland;
-import dk.mrspring.wasteland.world.biome.BiomeGenApocalypse;
 import dk.mrspring.wasteland.world.biome.BiomeGenWastelandBase;
 import dk.mrspring.wasteland.world.gen.WorldGenWastelandBigTree;
 
-@Mod(modid=ModInfo.modid, name=ModInfo.name, version=ModInfo.version, useMetadata = true)
+@Mod(modid=ModHelper.ModInfo.modid, name=ModHelper.ModInfo.name, version=ModHelper.ModInfo.version, useMetadata = true)
 public class Wasteland
 {
 	public static final WorldType wastelandWorldType = new WorldTypeWasteland("wasteland");
 	public static final WorldGenWastelandBigTree wastelandTree = new WorldGenWastelandBigTree(true);
 	
-	@Instance(value = ModInfo.modid)
+	@Instance(value = ModHelper.ModInfo.modid)
 	public static Wasteland instance;
 	
 	@SidedProxy(clientSide = "dk.mrspring.wasteland.ClientProxy", serverSide = "dk.mrspring.wasteland.CommonProxy")
@@ -42,9 +42,18 @@ public class Wasteland
 	
 	public static CreativeTabs tabWastelandBlocks = new CreativeTabs("tabWastelandBlocks")
 	{
+		@SideOnly(Side.CLIENT)
 		@Override
 		public Item getTabIconItem() {
 			return Item.getItemFromBlock(Blocks.dirt);
+		}
+	};
+	
+	public static CreativeTabs tabWastelandItems = new CreativeTabs("tabWastelandItems")
+	{
+		@SideOnly(Side.CLIENT)
+		public Item getTabIconItem() {
+			return Items.wheat;
 		}
 	};
 	
@@ -60,6 +69,7 @@ public class Wasteland
 		RuinConfig.load(ruinConfig);
 		
 		BlockWLM.load();
+		ItemWLM.load();
 		BiomeGenWastelandBase.load();
 		Ruin.load();
 	}

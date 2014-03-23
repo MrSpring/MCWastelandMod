@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.IWorldGenerator;
-import dk.mrspring.wasteland.ModInfo;
+import dk.mrspring.wasteland.ModHelper;
 
 public class RuinTreeHouse extends Ruin implements IWorldGenerator
 {

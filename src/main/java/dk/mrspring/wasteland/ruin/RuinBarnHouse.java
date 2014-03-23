@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.IWorldGenerator;
-import dk.mrspring.wasteland.ModInfo;
+import dk.mrspring.wasteland.ModHelper;
 
 public class RuinBarnHouse extends Ruin implements IWorldGenerator
 {
@@ -38,7 +38,7 @@ public class RuinBarnHouse extends Ruin implements IWorldGenerator
 		
 		if(material1.isSolid() && world.getHeightValue(xCoord + 1, zCoord + 1) == yCoord && world.getHeightValue(xCoord, zCoord + 1) == yCoord && world.getHeightValue(xCoord - 1, zCoord + 1) == yCoord && world.getHeightValue(xCoord - 1, zCoord) == yCoord && world.getHeightValue(xCoord - 1, zCoord - 1) == yCoord && world.getHeightValue(xCoord, zCoord - 1) == yCoord && world.getHeightValue(xCoord + 1, zCoord - 1) == yCoord)	// Upper Left Corner
 		{
-			System.out.println("Successfully generated Barn at: " + ModInfo.getCoordAsString(xCoord, zCoord) + ".");
+			System.out.println("Successfully generated Barn at: " + ModHelper.getCoordAsString(xCoord, zCoord) + ".");
 			
 			xCoord -= 6;
 			zCoord -= 4;

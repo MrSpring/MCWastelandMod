@@ -1,6 +1,6 @@
 package dk.mrspring.wasteland.world;
 
-import dk.mrspring.wasteland.ModInfo;
+import dk.mrspring.wasteland.ModHelper;
 import dk.mrspring.wasteland.Wasteland;
 import dk.mrspring.wasteland.WastelandBiomes;
 import dk.mrspring.wasteland.world.biome.BiomeGenWastelandBase;
@@ -26,5 +26,5 @@ public class WorldTypeWasteland extends WorldType
 	
 	@Override
 	public boolean showWorldInfoNotice()
-		{ return ModInfo.isDev; }
+		{ return ModHelper.ModInfo.isDev; }
 }

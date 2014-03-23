@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.IWorldGenerator;
-import dk.mrspring.wasteland.ModInfo;
+import dk.mrspring.wasteland.ModHelper;
 
 public class RuinRuined extends Ruin implements IWorldGenerator
 {
@@ -56,7 +56,7 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 		
 		if(material1.isSolid() && material2.isSolid() && material3.isSolid() && material4.isSolid() && material5.isSolid() && material6.isSolid() && material7.isSolid() && material8.isSolid() && material9.isSolid() && material10.isSolid() && material11.isSolid() && material12.isSolid() && material13.isSolid() && material14.isSolid() && material15.isSolid() && material16.isSolid() && material17.isSolid() && material18.isSolid() && material19.isSolid() && material20.isSolid() && material21.isSolid() && material22.isSolid() && material23.isSolid() && material24.isSolid() && material25.isSolid() && world.getHeightValue(x + 4, z) == y && world.getHeightValue(x, z + 5) == y && world.getHeightValue(x - 5, z) == y && world.getHeightValue(x, z - 4) == y)
 		{
-			System.out.println("Generating Ruined at: " + ModInfo.getCoordAsString(x, y, z));
+			System.out.println("Generating Ruined at: " + ModHelper.getCoordAsString(x, y, z));
 			
 			int xCoord = x;
 			int yCoord = y;

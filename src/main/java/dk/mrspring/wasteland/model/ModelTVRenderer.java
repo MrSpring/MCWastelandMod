@@ -1,15 +1,18 @@
 package dk.mrspring.wasteland.model;
 
-import org.lwjgl.opengl.GL11;
-
-import dk.mrspring.wasteland.ModInfo;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.World;
 
+import org.lwjgl.opengl.GL11;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import dk.mrspring.wasteland.ModHelper;
+
+@SideOnly(Side.CLIENT)
 public class ModelTVRenderer extends TileEntitySpecialRenderer
 {
 	private final ModelTV model;
@@ -24,7 +27,7 @@ public class ModelTVRenderer extends TileEntitySpecialRenderer
 	{
 		GL11.glPushMatrix();
 			GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
-			ResourceLocation textures = new ResourceLocation(ModInfo.modid + ":textures/models/TV.png");
+			ResourceLocation textures = new ResourceLocation(ModHelper.ModInfo.modid + ":textures/models/TV.png");
 			Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 			
 			GL11.glPushMatrix();

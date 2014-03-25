@@ -22,8 +22,8 @@ public class ModHelper
 	
 	public static class BlockSides
 	{
-		public static final int TOP = 0;
-		public static final int BOTTOM = 1;
+		public static final int TOP = 1;
+		public static final int BOTTOM = 0;
 		public static final int NORTH = 2;
 		public static final int SOUTH = 3;
 		public static final int WEST = 4;

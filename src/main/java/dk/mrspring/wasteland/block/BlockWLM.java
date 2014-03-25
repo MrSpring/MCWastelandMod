@@ -28,7 +28,8 @@ public class BlockWLM extends Block
 	public static void load()
 	{
 		GameRegisterer.registerBlock(new BlockTV(Material.circuits, BlockInfo.tvName).setCreativeTab(Wasteland.tabWastelandBlocks));
-		GameRegisterer.registerBlock(new BlockWLM(Material.ground, BlockInfo.driedSandName).setCreativeTab(Wasteland.tabWastelandBlocks));
+		GameRegisterer.registerBlock(new BlockWLM(Material.ground, BlockInfo.driedSandName).setCreativeTab(Wasteland.tabWastelandBlocks).setBlockTextureName("minecraft:sand"));
 		GameRegisterer.registerBlock(new BlockBurntLog(BlockInfo.burntLogName).setCreativeTab(Wasteland.tabWastelandBlocks));
+		GameRegisterer.registerBlock(new BlockBurntGrass(BlockInfo.burntGrassName).setCreativeTab(Wasteland.tabWastelandBlocks));
 	}
 }

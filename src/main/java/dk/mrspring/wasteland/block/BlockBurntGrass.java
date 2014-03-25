@@ -3,6 +3,7 @@ package dk.mrspring.wasteland.block;
 import dk.mrspring.wasteland.ModHelper;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.IIcon;
 
 public class BlockBurntGrass extends BlockWLM
@@ -30,7 +31,7 @@ public class BlockBurntGrass extends BlockWLM
 		if (side == ModHelper.BlockSides.TOP)
 			return top;
 		else if (side == ModHelper.BlockSides.BOTTOM)
-			return blockIcon;
+			return Blocks.dirt.getIcon(ModHelper.BlockSides.BOTTOM, 0);
 		else
 			return sides;
 	}

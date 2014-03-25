@@ -28,4 +28,12 @@ public class BlockBurntLog extends BlockWLM
 		super.registerBlockIcons(register);
 		top = register.registerIcon(this.getTextureName() + "_top");
 	}
+	
+	@Override
+	public IIcon getIcon(int side, int metadata)
+	{
+		if (side == ModHelper.BlockSides.TOP || side == ModHelper.BlockSides.BOTTOM)
+			return top;
+		else return super.getIcon(side, metadata);
+	}
 }

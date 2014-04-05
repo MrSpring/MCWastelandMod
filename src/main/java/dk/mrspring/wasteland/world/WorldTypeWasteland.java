@@ -26,16 +26,6 @@ public class WorldTypeWasteland extends WorldType
 		{ return new ChunkProviderWasteland(world, world.getSeed(), world.getWorldInfo().isMapFeaturesEnabled()); }
 	
 	@Override
-	public GenLayer getBiomeLayer(long worldSeed, GenLayer parentLayer)
-	{
-		GenLayer layer = new GenLayerBiomeWasteland(200L, parentLayer, this);
-		layer = GenLayerZoom.magnify(1000L, layer, 2);
-		layer = new GenLayerBiomeEdge(1000L, layer);
-		
-		return layer;
-	}
-	
-	@Override
 	public boolean showWorldInfoNotice()
 		{ return ModHelper.ModInfo.isDev; }
 }

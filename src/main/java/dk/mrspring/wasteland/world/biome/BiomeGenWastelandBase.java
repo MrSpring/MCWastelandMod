@@ -33,9 +33,7 @@ public class BiomeGenWastelandBase extends BiomeGenBase
 	
 	public static void load()
 	{
-		GameRegisterer.registerBiome(new BiomeGenDriedOcean(ModConfig.driedOceanID, "dried_ocean", height_DriedOcean), BiomeDictionary.Type.WASTELAND);
 		GameRegisterer.registerBiome(new BiomeGenApocalypse(ModConfig.wastelandBiomeID, "Wasteland", height_Wasteland), BiomeDictionary.Type.WASTELAND);
-		GameRegisterer.registerBiome(new BiomeGenBurntForest(ModConfig.burntForestID, "burnt_forest", height_Wasteland), BiomeDictionary.Type.WASTELAND);
 	}
 	
 	public BiomeGenWastelandBase setTopBlock(Block block)

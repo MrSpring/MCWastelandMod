@@ -37,6 +37,7 @@ public class Ruin
 	public static Ruin barnHouse;
 	public static Ruin treeHouse;
 	public static Ruin ruined;
+	public static Ruin spawner;
 	
 	public static void load()
 	{
@@ -49,6 +50,7 @@ public class Ruin
 		barnHouse = new RuinBarnHouse("barn_house").setRarity(RuinConfig.barnHouseRarity).setLoot(RuinConfig.getLoot(RuinConfig.barnHouseLoot));
 		treeHouse = new RuinTreeHouse("tree_house").setRarity(RuinConfig.treeHouseRarity);
 		ruined = new RuinRuined("ruined").setRarity(RuinConfig.ruinedRarity);
+		spawner = new RuinSpawner("spawner").setRarity(1);
 	}
 	
 	public Ruin(String par1Name)

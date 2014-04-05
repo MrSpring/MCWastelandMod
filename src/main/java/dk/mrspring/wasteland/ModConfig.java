@@ -12,6 +12,7 @@ public class ModConfig
 	public static int driedOceanID;
 	public static int burntForestID;
 	public static int wastelandTreeSpawnRate;
+	public static int wastelandTreeHeight;
 	
 	public static void load(Configuration config)
 	{
@@ -20,6 +21,7 @@ public class ModConfig
 			driedOceanID = config.get("IDs", "Dried Ocean Biome ID", 44).getInt(43);
 			burntForestID = config.get("IDs", "Burnt Forest Biome ID", 45).getInt(44);
 			wastelandTreeSpawnRate = config.get("Worldgen", "How common the Wasteland trees are. Higher values: more trees", 8).getInt(8);
+			wastelandTreeHeight = config.get("Worldgen", "The height of the small wasteland trees", 5).getInt(5);
 		config.save();
 	}
 }

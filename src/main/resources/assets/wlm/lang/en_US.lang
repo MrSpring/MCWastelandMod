@@ -1,5 +1,19 @@
+createworld.customize.wasteland.title=Wasteland Customization
+createworld.customize.wasteland.ruin=Ruin
+createworld.customize.wasteland.rarity=Rarity
+createworld.customize.wasteland.rarity.increase=Increase
+createworld.customize.wasteland.rarity.decrease=Decrease
+createworld.customize.wasteland.disabled=Disabled
+createworld.customize.wasteland.default=Reset to Default
+
 generator.wasteland=Wasteland
 generator.wasteland.info=You are using a development version of the mod. Bugs may occur.
-itemGroup.tabWastelandBlocks=Wasteland Blocks
-tile.tv.name=Television
-item.bag.name=Bag
+
+ruin.lightposts.name=Lightpost
+ruin.ruined_civ_1.name=Ruined Civ 1
+ruin.ruined_civ_2.name=Ruined Civ 2
+ruin.tent.name=Survivor Tent
+ruin.barn_house.name=Barn
+ruin.tree_house.name=Tree House
+ruin.ruined.name=Ruined Temple of Sorts
+ruin.spawner.name=Spawner

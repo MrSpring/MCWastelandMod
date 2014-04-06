@@ -41,6 +41,7 @@ import net.minecraftforge.event.terraingen.ChunkProviderEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.terraingen.TerrainGen;
 import cpw.mods.fml.common.eventhandler.Event.Result;
+import dk.mrspring.wasteland.world.gen.WastelandGeneratorInfo;
 
 public class ChunkProviderWasteland implements IChunkProvider
 {

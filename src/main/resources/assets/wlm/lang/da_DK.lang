@@ -1,5 +1,18 @@
+createworld.customize.wasteland.title=Tilpas Wasteland Generation
+createworld.customize.wasteland.ruin=Ruin
+createworld.customize.wasteland.rarity=Sjældenhed
+createworld.customize.wasteland.rarity.increase=Forhøj
+createworld.customize.wasteland.rarity.decrease=Formindsk
+createworld.customize.wasteland.disabled=Deaktiveret
+createworld.customize.wasteland.default=Nulstil til Standard
+
 generator.wasteland=Wasteland
-generator.wasteland.info=Du bruger en prøve version af moden. Fejl kan forekomme.
-itemGroup.tabWastelandBlocks=Wasteland Blokke
-tile.tv.name=Fjernsyn
-item.bag.name=Pose
+
+ruin.lightposts.name=Gade Lampe
+ruin.ruined_civ_1.name=Ødelagt Bolig 1
+ruin.ruined_civ_2.name=Ødelagt Bolig 2
+ruin.tent.name=Tælt
+ruin.barn_house.name=Gård
+ruin.tree_house.name=Træ Hus
+ruin.ruined.name=Ødelagt Tempel
+ruin.spawner.name=Spawner

@@ -31,6 +31,8 @@ public class Wasteland
 	public static final WorldType wastelandWorldType = new WorldTypeWasteland("wasteland");
 	public static final WorldGenWastelandBigTree wastelandTree = new WorldGenWastelandBigTree(true);
 	
+	public static int lastID = 0;
+	
 	@Instance(value = ModHelper.ModInfo.modid)
 	public static Wasteland instance;
 	
@@ -50,8 +52,7 @@ public class Wasteland
 	@EventHandler
 	public static void init(FMLInitializationEvent event)
 	{
-		for(int currentRuinID = 0; currentRuinID < Ruin.ruins.length && Ruin.ruins[currentRuinID] != null; currentRuinID++)
-			{ GameRegistry.registerWorldGenerator((IWorldGenerator) Ruin.ruins[currentRuinID], Ruin.ruins[currentRuinID].getWeight()); }
+		WorldTypeWasteland.genInfo.createDefault();
 	}
 	
 	@EventHandler

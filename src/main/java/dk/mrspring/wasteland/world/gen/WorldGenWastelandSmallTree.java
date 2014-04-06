@@ -25,7 +25,7 @@ public class WorldGenWastelandSmallTree extends WorldGenTrees
 		
 		int r = random.nextInt(100);
 		
-		if(world.getBlock(x, y, z) == Blocks.dirt && !material1.isSolid() && !material2.isSolid() && !material3.isSolid() && !material4.isSolid() && !material5.isSolid() && !(r >= ModConfig.wastelandTreeSpawnRate))
+		if(world.getBlock(x, y, z) == Blocks.dirt && !material1.isSolid() && !material2.isSolid() && !material3.isSolid() && !material4.isSolid() && !material5.isSolid() && !(r >= ModConfig.wastelandTreesPreChunk))
 		{
 			y++;
 			

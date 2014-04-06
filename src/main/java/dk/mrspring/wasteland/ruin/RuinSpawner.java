@@ -63,6 +63,8 @@ public class RuinSpawner extends Ruin implements IWorldGenerator
 			
 			// Layer 2 Generation
 			
+			yCoord--;
+			
 			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.air);
 			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.stonebrick, 2);
 			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 4, Blocks.chest);
@@ -101,6 +103,7 @@ public class RuinSpawner extends Ruin implements IWorldGenerator
 			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 2, Blocks.cobblestone);
 			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 3, Blocks.cobblestone);
 			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 4, Blocks.netherrack);
+			genHelper.setBlock(xCoord - 2, yCoord + 1, zCoord + 4, Blocks.fire);
 			
 			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 1, Blocks.planks);
 			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 0, Blocks.stonebrick, 2);
@@ -148,6 +151,55 @@ public class RuinSpawner extends Ruin implements IWorldGenerator
 			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.stonebrick);
 			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.cobblestone);
 			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.stonebrick, 2);
+			
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.stonebrick);
+			
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick);
+			
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
+			
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 5, Blocks.stonebrick);
+			
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 5, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 5, Blocks.stonebrick, 2);
+			
+			// Layer 4 Generation
+			
+			yCoord++;
+			
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 0, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 5, Blocks.stonebrick);
 			
 			return true;
 		}

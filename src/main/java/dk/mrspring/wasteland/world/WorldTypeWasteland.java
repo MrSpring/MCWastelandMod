@@ -1,5 +1,9 @@
 package dk.mrspring.wasteland.world;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiCreateWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.WorldChunkManager;
@@ -10,9 +14,13 @@ import net.minecraft.world.gen.layer.GenLayerBiomeEdge;
 import net.minecraft.world.gen.layer.GenLayerZoom;
 import dk.mrspring.wasteland.ModHelper;
 import dk.mrspring.wasteland.WastelandBiomes;
+import dk.mrspring.wasteland.client.GuiCreateWastelandWorld;
+import dk.mrspring.wasteland.world.gen.WastelandGeneratorInfo;
 
 public class WorldTypeWasteland extends WorldType
 {
+	public static WastelandGeneratorInfo genInfo = new WastelandGeneratorInfo();
+	
 	public WorldTypeWasteland(String name)
 	{
 		super(name);
@@ -26,6 +34,15 @@ public class WorldTypeWasteland extends WorldType
 		{ return new ChunkProviderWasteland(world, world.getSeed(), world.getWorldInfo().isMapFeaturesEnabled()); }
 	
 	@Override
-	public boolean showWorldInfoNotice()
-		{ return ModHelper.ModInfo.isDev; }
+	public boolean isCustomizable()
+	{
+		return true;
+	}
+	
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void onCustomizeButton(Minecraft instance, GuiCreateWorld guiCreateWorld)
+	{
+		instance.displayGuiScreen(new GuiCreateWastelandWorld(guiCreateWorld, guiCreateWorld.field_146334_a, genInfo));
+	}
 }

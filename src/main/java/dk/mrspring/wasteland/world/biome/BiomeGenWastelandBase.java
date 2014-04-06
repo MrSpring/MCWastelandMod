@@ -28,12 +28,14 @@ public class BiomeGenWastelandBase extends BiomeGenBase
 		wastelandBiomes[lastID] = this;
 		lastID++;
 		
+		this.theBiomeDecorator = new BiomeDecoratorWasteland();
+		
 		this.loadBiome();
 	}
 	
 	public static void load()
 	{
-		GameRegisterer.registerBiome(new BiomeGenApocalypse(ModConfig.wastelandBiomeID, "Wasteland", height_Wasteland), BiomeDictionary.Type.WASTELAND);
+		GameRegisterer.registerBiome(new BiomeGenApocalypse(ModConfig.apocalypseBiomeID, "Wasteland", height_Wasteland), BiomeDictionary.Type.WASTELAND);
 	}
 	
 	public BiomeGenWastelandBase setTopBlock(Block block)

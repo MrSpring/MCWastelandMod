@@ -20,16 +20,6 @@ public class ModHelper
 		public static final boolean isDev = version.contains("DEV");
 	}
 	
-	public static class BlockSides
-	{
-		public static final int TOP = 1;
-		public static final int BOTTOM = 0;
-		public static final int NORTH = 2;
-		public static final int SOUTH = 3;
-		public static final int WEST = 4;
-		public static final int EAST = 5;
-	}
-	
 	public static final float pixel = 0.0625F;
 	
 	/**
@@ -70,7 +60,7 @@ public class ModHelper
 	 * @param rotationYaw
 	 * @return
 	 */
-	public static int getRotationAsDirection(float rotationYaw)
+	public static int getEntityRotationAsDirection(float rotationYaw)
 	{
 		return MathHelper.floor_double((double)(rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 	}

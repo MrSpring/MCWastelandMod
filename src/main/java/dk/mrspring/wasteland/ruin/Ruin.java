@@ -1,19 +1,17 @@
 package dk.mrspring.wasteland.ruin;
 
-import java.util.Collection;
-import java.util.List;
 import java.util.Random;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.registry.GameRegistry;
+import dk.mrspring.wasteland.Wasteland;
 import dk.mrspring.wasteland.WastelandBiomes;
-import dk.mrspring.wasteland.world.biome.BiomeGenWastelandBase;
-import net.minecraft.world.biome.BiomeGenBase;
+import dk.mrspring.wasteland.world.WorldTypeWasteland;
+import dk.mrspring.wasteland.world.gen.WastelandGeneratorInfo;
 
 public class Ruin
 {
@@ -22,9 +20,6 @@ public class Ruin
 	protected int rarity = 1;
 	protected int weight = 10;
 	protected ItemStack[] loot;
-	protected BiomeGenBase[] allowedBiomes;
-	
-	private int lastID = 0;
 	
 	public static Ruin[] ruins = new Ruin[32];
 	
@@ -42,10 +37,8 @@ public class Ruin
 	public static void load()
 	{
 		lightposts = new RuinLightposts("lightposts").setRarity(RuinConfig.lightpostsRarity);
-		randomFire = new RuinRandomFire("random_fire").setRarity(RuinConfig.randomFireRarity);
 		ruinedCiv1 = new RuinRuinedCiv1("ruined_civ_1").setRarity(RuinConfig.ruinedCiv1Rarity).setLoot(RuinConfig.getLoot(RuinConfig.ruinedCiv1Loot));
 		ruinedCiv2 = new RuinRuinedCiv2("ruined_civ_2").setRarity(RuinConfig.ruinedCiv2Rarity);
-		randomRubble = new RuinRandomRubble("random_rubble").setRarity(RuinConfig.randomRubbleRarity);
 		survivorTent = new RuinSurvivorTent("tent").setRarity(RuinConfig.survivorTentRarity);
 		barnHouse = new RuinBarnHouse("barn_house").setRarity(RuinConfig.barnHouseRarity).setLoot(RuinConfig.getLoot(RuinConfig.barnHouseLoot));
 		treeHouse = new RuinTreeHouse("tree_house").setRarity(RuinConfig.treeHouseRarity);
@@ -57,11 +50,27 @@ public class Ruin
 	{
 		this.name = par1Name;
 		
-		this.id = lastID;
-		this.ruins[id] = this;
-		lastID++;
+		this.id = nextID();
+		this.ruins[this.id] = this;
 		
 		GameRegistry.registerWorldGenerator(this.toIWorldGenerator(), this.weight);
+	}
+	
+	private int nextID()
+	{
+		int i = Wasteland.lastID;
+		Wasteland.lastID++;
+		return i;
+	}
+	
+	public String getLocalizedName()
+	{
+		 return StatCollector.translateToLocal(this.getUnlocalizedName() + ".name");
+	}
+	
+	public String getUnlocalizedName()
+	{
+		return "ruin." + this.name;
 	}
 	
 	public Ruin setRarity(int par1Rarity)
@@ -73,6 +82,11 @@ public class Ruin
 	public int getRarity()
 	{
 		return this.rarity;
+	}
+	
+	public int getRarityForGen(World world)
+	{
+		return WorldTypeWasteland.genInfo.getRarity(this.id);
 	}
 	
 	public Ruin setWeight(int par1Weight)
@@ -133,9 +147,22 @@ public class Ruin
 		int xCoord = i + random.nextInt(16);
 		int yCoord = world.getHeightValue(i, j);
 		int zCoord = j + random.nextInt(16);
-		
-		if(random.nextInt(this.getRarity()) == 0 && world.getBiomeGenForCoords(xCoord, zCoord) == WastelandBiomes.apocalypse)
-			this.generate(world, random, xCoord, yCoord, zCoord);
+		if (this.getRarityForGen(world) != 0)
+		{
+			if (!world.isRemote)
+			{
+				if (random.nextInt(this.getRarityForGen(world)) == 0 && world.getBiomeGenForCoords(xCoord, zCoord) == WastelandBiomes.apocalypse)
+					this.generate(world, random, xCoord, yCoord, zCoord);
+				else ;
+			}
+			else
+			{
+				if (random.nextInt(this.getRarity()) == 0 && world.getBiomeGenForCoords(xCoord, zCoord) == WastelandBiomes.apocalypse)
+					this.generate(world, random, xCoord, yCoord, zCoord);
+				else ;
+			}
+		}
+		else ;
 	}
 	
 	protected void generateEnd(World world, Random random, int i, int j) { }

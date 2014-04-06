@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import dk.mrspring.wasteland.ModConfig;
+import dk.mrspring.wasteland.ModHelper;
 import dk.mrspring.wasteland.Wasteland;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
@@ -338,7 +339,7 @@ public class WorldGenWastelandBigTree extends WorldGenBigTree
 	boolean validTreeLocation()
 	{
 		int i = rand.nextInt(100);
-		if(!(i >= ModConfig.wastelandTreeSpawnRate))
+		if(!(i >= ModConfig.wastelandTreesPreChunk))
 		{
 			Block var3 = worldObj.getBlock(basePos[0], basePos[1] - 1, basePos[2]);
 			
@@ -370,6 +371,7 @@ public class WorldGenWastelandBigTree extends WorldGenBigTree
 			this.generateLeaves();
 			this.generateTrunk();
 			this.generateLeafNodeBases();
+			System.out.println(" Successful Tree Generation at: " + ModHelper.getCoordAsString(basePos[0], basePos[1], basePos[2]));
 			return true;
 		}
 	}

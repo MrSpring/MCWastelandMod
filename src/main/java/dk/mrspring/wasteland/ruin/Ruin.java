@@ -37,10 +37,10 @@ public class Ruin
 	public static void load()
 	{
 		lightposts = new RuinLightposts("lightposts").setRarity(RuinConfig.lightpostsRarity);
-		ruinedCiv1 = new RuinRuinedCiv1("ruined_civ_1").setRarity(RuinConfig.ruinedCiv1Rarity).setLoot(RuinConfig.getLoot(RuinConfig.ruinedCiv1Loot));
+		ruinedCiv1 = new RuinRuinedCiv1("ruined_civ_1").setRarity(RuinConfig.ruinedCiv1Rarity).setLoot(RuinConfig.getLoot(RuinConfig.ruinedCiv1LootRaw));
 		ruinedCiv2 = new RuinRuinedCiv2("ruined_civ_2").setRarity(RuinConfig.ruinedCiv2Rarity);
 		survivorTent = new RuinSurvivorTent("tent").setRarity(RuinConfig.survivorTentRarity);
-		barnHouse = new RuinBarnHouse("barn_house").setRarity(RuinConfig.barnHouseRarity).setLoot(RuinConfig.getLoot(RuinConfig.barnHouseLoot));
+		barnHouse = new RuinBarnHouse("barn_house").setRarity(RuinConfig.barnHouseRarity).setLoot(RuinConfig.getLoot(RuinConfig.barnHouseLootRaw));
 		treeHouse = new RuinTreeHouse("tree_house").setRarity(RuinConfig.treeHouseRarity);
 		ruined = new RuinRuined("ruined").setRarity(RuinConfig.ruinedRarity);
 		spawner = new RuinSpawner("spawner").setRarity(1);

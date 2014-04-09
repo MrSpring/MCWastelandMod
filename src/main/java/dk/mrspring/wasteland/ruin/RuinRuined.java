@@ -10,6 +10,8 @@ import dk.mrspring.wasteland.ModHelper;
 
 public class RuinRuined extends Ruin implements IWorldGenerator
 {
+	private RuinGenHelper genHelper = new RuinGenHelper();
+	
 	public RuinRuined(String par1Name)
 	{
 		super(par1Name);
@@ -71,138 +73,112 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			// Layer 1 generation
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 6, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord + 6, 2, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 6, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord - 1, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 3, yCoord, zCoord + 0, 2, 2);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 3, yCoord, zCoord + 4, 2, 2);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 2, yCoord, zCoord - 2, 2, 2);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 4, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 5, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 7, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 2, yCoord, zCoord + 7, 2, 2);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 4, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 7, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 1, yCoord, zCoord - 2, 2, 2);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 1, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 1, yCoord, zCoord + 0, 2, 2);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 4, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 4, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.dirt);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.dirt);
-			world.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord + 0, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord + 0, yCoord, zCoord - 1, Blocks.dirt);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.dirt);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 0, yCoord, zCoord + 2, 2, 2);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 0, yCoord, zCoord + 2, 2, 2);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.dirt);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.dirt);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.dirt);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.dirt);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.dirt);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord + 1, 2, 2);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord + 4, 2, 2);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.dirt);
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 7, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord - 7, 2, 2);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.dirt);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord - 3, 2, 2);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.dirt);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord + 0, 2, 2);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord + 2, 2, 2);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 4, Blocks.netherrack);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 7, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 4, Blocks.netherrack);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.dirt);
 			
-			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.dirt);
-			world.setBlock(xCoord - 3, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord - 3, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord - 3, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 0, 2, 2);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 2, 2, 2);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 3, 2, 2);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 4, Blocks.dirt);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.dirt);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 4, Blocks.dirt);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.dirt);
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 4, Blocks.dirt);
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord - 4, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord - 4, yCoord, zCoord - 1, Blocks.dirt);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 0, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.dirt);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 4, Blocks.dirt);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 1, Blocks.dirt);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.dirt);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 6, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 6, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick); //
-			world.setBlock(xCoord - 5, yCoord, zCoord + 0, Blocks.dirt);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 1, Blocks.stonebrick); //
-			world.setBlock(xCoord - 5, yCoord, zCoord + 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 2, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 6, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 0, Blocks.dirt);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.dirt);
 			
-			world.setBlock(xCoord - 6, yCoord, zCoord - 6, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 6, yCoord, zCoord - 6, 2, 2);
+			genHelper.setBlock(xCoord - 6, yCoord, zCoord - 6, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 7, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 7, yCoord, zCoord - 4, 2, 2);
+			genHelper.setBlock(xCoord - 7, yCoord, zCoord - 4, Blocks.stonebrick, 2);
 			
 			/*	  	  A X+
 			 *		  |
@@ -215,80 +191,59 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 7, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 7, yCoord, xCoord + 4, 2, 2);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 5, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 5, yCoord, zCoord + 5, 2, 2);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 7, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 5, yCoord, zCoord + 7, 2, 2);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 5, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 7, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick); //
-			world.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick); //
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.stonebrick); //
-			world.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.stonebrick); //
-			world.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord + 3, 2, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick); //
-			world.setBlock(xCoord + 3, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 3, yCoord, zCoord - 2, 2, 2);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 2, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick); //
-			world.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 2, yCoord, zCoord - 3, 2, 2);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.stone_stairs);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 2, yCoord, zCoord + 1, 2, 2);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 2, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.stone_stairs);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick); //
-			world.setBlock(xCoord + 1, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 1, yCoord, zCoord + 3, 2, 2);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 1, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord - 6, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord, yCoord, zCoord - 6, 2, 2);
-			world.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord + 0, yCoord, zCoord - 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 6, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.cobblestone);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.cobblestone);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 4, Blocks.fire);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 4, Blocks.fire);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 3, yCoord, zCoord - 2, Blocks.stone_stairs);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 4, 2, 2);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 2, Blocks.stone_stairs);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick); //
-			world.setBlock(xCoord - 4, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord - 2, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 3, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick); //
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick); //
-			world.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 3, 2, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick, 2);
 			
 			/*	  	  A X+
 			 *		  |
@@ -301,47 +256,39 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.stonebrick);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 2, yCoord, zCoord - 4, 2, 2);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 1, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 1, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.cobblestone);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.cobblestone);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 2, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 3, 2, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick, 2);
 			
 			/*	  	  A X+
 			 *		  |
@@ -354,45 +301,36 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord + 2, 2, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 3, yCoord, zCoord - 3, 2, 2);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 0, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.stone_stairs);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.stone_stairs);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord - 4, 2, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord - 4, 2, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 4, 2, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 2, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 3, 2, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick, 2);
 			
 			/*	  	  A X+
 			 *		  |
@@ -405,44 +343,35 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord - 2, 2, 2);
-			world.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.stonebrick);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 3, yCoord, zCoord - 3, 2, 2);
-			world.setBlock(xCoord + 3, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 3, yCoord, zCoord - 2, 2, 2);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 2, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 0, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 0, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord - 3, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 4, 2, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
 			
 			/*	  	  A X+
 			 *		  |
@@ -455,48 +384,41 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, xCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord + 1, 2, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, xCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.log);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 1, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.log);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord + 0, yCoord, zCoord - 1, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.log);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.log);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 2, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 2, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
 			
 			/*	  	  A X+
 			 *		  |
@@ -509,46 +431,37 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
 			
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 3, yCoord, zCoord - 3, 2, 2);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 3, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord - 1, yCoord, xCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, xCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord - 3, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 1, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 2, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 3, 2, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick, 2);
 			
 			/*	  	  A X+
 			 *		  |
@@ -561,81 +474,56 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord + 0, 2, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 1, yCoord, zCoord - 4, 2, 2);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 0, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 0, yCoord, zCoord - 3, 2, 2);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 0, yCoord, zCoord + 3, 2, 2);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 0, yCoord, zCoord + 4, 2, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord - 3, 2, 2);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord + 3, 2, 2);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 1, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord - 4, 2, 2);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord - 2, 2, 2);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 2, yCoord, zCoord + 0, 2, 2);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlock(xCoord - 3, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlock(xCoord - 3, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord - 3, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 0, 2, 2);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 3, 2, 2);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 4, 2, 2);
-			world.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord + 5, 2, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord - 3, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord - 4, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 0, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 1, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 3, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 2, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 0, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 0, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 1, Blocks.stonebrick);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord + 3, 2, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 3, Blocks.stonebrick, 2);
 			
 			/*	  	  A X+
 			 *		  |
@@ -648,24 +536,20 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord + 4, yCoord, zCoord - 1, 2, 2);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord - 1, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 5, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 3, yCoord, zCoord - 4, 2, 2);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord - 3, 2, 2);
-			world.setBlock(xCoord - 4, yCoord, zCoord - 2, Blocks.chest);
-			world.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord + 4, 2, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 2, Blocks.chest);
+			// TODO: Chest Loot for: Ruined
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord + 4, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 1, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord + 0, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord + 0, Blocks.stonebrick);
 			
 			/*	  	  A X+
 			 *		  |
@@ -678,13 +562,12 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 3, yCoord, zCoord - 4, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 2, 2, 2);
-			world.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 1, Blocks.stonebrick);
 			
 			/*	  	  A X+
 			 *		  |
@@ -697,11 +580,9 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 4, yCoord, zCoord - 3, 2, 2);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick, 2);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
-			world.setBlockMetadataWithNotify(xCoord - 5, yCoord, zCoord - 2, 2, 2);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick, 2);
 			
 			/*	  	  A X+
 			 *		  |
@@ -714,9 +595,9 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 			
 			yCoord++;
 			
-			world.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 4, yCoord, zCoord - 3, Blocks.stonebrick);
 			
-			world.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
+			genHelper.setBlock(xCoord - 5, yCoord, zCoord - 2, Blocks.stonebrick);
 			
 			return true;
 		}

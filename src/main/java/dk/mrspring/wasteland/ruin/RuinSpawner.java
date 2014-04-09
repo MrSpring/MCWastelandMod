@@ -68,6 +68,7 @@ public class RuinSpawner extends Ruin implements IWorldGenerator
 			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.air);
 			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.stonebrick, 2);
 			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 4, Blocks.chest);
+			// TODO: Chest Loot for: Spawner
 			
 			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.stonebrick, 2);
 			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 1, Blocks.air);

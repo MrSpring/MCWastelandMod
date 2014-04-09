@@ -10,6 +10,8 @@ import cpw.mods.fml.common.IWorldGenerator;
 
 public class RuinSurvivorTent extends Ruin implements IWorldGenerator
 {
+	private RuinGenHelper genHelper = new RuinGenHelper();
+	
 	public RuinSurvivorTent(String par1Name)
 	{
 		super(par1Name);
@@ -38,144 +40,145 @@ public class RuinSurvivorTent extends Ruin implements IWorldGenerator
 			 *	  	  V X-
 			 */
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.dirt);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.dirt);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 2, Blocks.dirt);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.dirt);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.chest);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.chest);
+			// TODO: Chest Loot for: Tent
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.dirt);
 			
-			world.setBlock(xCoord, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord, yCoord, zCoord - 1, Blocks.planks);
-			world.setBlock(xCoord, yCoord, zCoord + 0, Blocks.planks);
-			world.setBlock(xCoord, yCoord - 1, zCoord + 0, Blocks.tnt);
-			world.setBlock(xCoord, yCoord, zCoord + 1, Blocks.planks);
-			world.setBlock(xCoord, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 1, Blocks.planks);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 0, Blocks.planks);
+			genHelper.setBlock(xCoord, yCoord - 1, zCoord + 0, Blocks.tnt);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 1, Blocks.planks);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 2, Blocks.dirt);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.dirt);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 2, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.dirt);
 			
 			// Layer 2 generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.wool);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.wool);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.wool);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.wool);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 1, Blocks.wool);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 2, Blocks.wool);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.wool);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.wool);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.wool);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.wool);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 1, Blocks.wool);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 2, Blocks.wool);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.air);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.air);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.air);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.air);
 			
-			world.setBlock(xCoord, yCoord, zCoord - 3, Blocks.air);
-			world.setBlock(xCoord, yCoord, zCoord - 2, Blocks.air);
-			world.setBlock(xCoord, yCoord, zCoord - 1, Blocks.air);
-			world.setBlock(xCoord, yCoord, zCoord + 0, Blocks.wooden_pressure_plate);
-			world.setBlock(xCoord, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 3, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 2, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 1, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 0, Blocks.wooden_pressure_plate);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 2, Blocks.air);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.air);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.wool);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 2, Blocks.wool);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.wool);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.wool);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.wool);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.wool);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.wool);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 2, Blocks.wool);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.wool);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.wool);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.wool);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.wool);
 			
 			// Layer 3 generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.air);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.air);
-			world.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.air);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord - 2, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 3, Blocks.air);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 2, Blocks.air);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord - 1, Blocks.air);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord - 2, yCoord, zCoord + 2, Blocks.air);
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.wool);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.wool);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.wool);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.wool);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.wool);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.wool);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.wool);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.wool);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.wool);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.wool);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.wool);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.wool);
 			
-			world.setBlock(xCoord, yCoord, zCoord - 3, Blocks.air);
-			world.setBlock(xCoord, yCoord, zCoord - 2, Blocks.air);
-			world.setBlock(xCoord, yCoord, zCoord - 1, Blocks.air);
-			world.setBlock(xCoord, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 3, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 2, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 1, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 2, Blocks.air);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.wool);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.wool);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.wool);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.wool);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.wool);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.wool);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.wool);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.wool);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.wool);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.wool);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.wool);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.wool);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 2, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 3, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 2, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.air);
 			
 			// Layer 4 generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.air);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.air);
-			world.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.air);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.air);
 			
-			world.setBlock(xCoord, yCoord, zCoord - 3, Blocks.wool);
-			world.setBlock(xCoord, yCoord, zCoord - 2, Blocks.wool);
-			world.setBlock(xCoord, yCoord, zCoord - 1, Blocks.wool);
-			world.setBlock(xCoord, yCoord, zCoord + 0, Blocks.wool);
-			world.setBlock(xCoord, yCoord, zCoord + 1, Blocks.wool);
-			world.setBlock(xCoord, yCoord, zCoord + 2, Blocks.wool);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 3, Blocks.wool);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 2, Blocks.wool);
+			genHelper.setBlock(xCoord, yCoord, zCoord - 1, Blocks.wool);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 0, Blocks.wool);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 1, Blocks.wool);
+			genHelper.setBlock(xCoord, yCoord, zCoord + 2, Blocks.wool);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 3, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 2, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.air);
 			
 			return true;
 		}

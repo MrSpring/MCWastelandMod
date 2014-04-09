@@ -14,6 +14,8 @@ import dk.mrspring.wasteland.ModHelper;
 
 public class RuinBarnHouse extends Ruin implements IWorldGenerator
 {
+	private RuinGenHelper genHelper = new RuinGenHelper();
+	
 	public RuinBarnHouse(String name)
 	{
 		super(name);
@@ -52,489 +54,486 @@ public class RuinBarnHouse extends Ruin implements IWorldGenerator
 			for(int i = 0; i < 9; i++)
 				{ world.setBlock(xCoord, yCoord, zCoord + i, Blocks.cobblestone); }
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 3, Blocks.cobblestone);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 4, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 6, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 7, Blocks.dirt);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 4, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 6, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 7, Blocks.dirt);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 4, Blocks.cobblestone);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 5, Blocks.dirt);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 4, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 4, Blocks.cobblestone);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 5, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 7, Blocks.dirt);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 4, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 7, Blocks.dirt);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 4, Blocks.planks);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 5, Blocks.cobblestone);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 6, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 7, Blocks.dirt);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 4, Blocks.planks);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 6, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 7, Blocks.dirt);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 5, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 4, Blocks.dirt);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 5, Blocks.dirt);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 6, Blocks.dirt);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 4, Blocks.dirt);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 6, Blocks.dirt);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 6, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 4, Blocks.cobblestone);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 5, Blocks.dirt);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 7, Blocks.planks);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 4, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 7, Blocks.planks);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 7, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 3, Blocks.cobblestone);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 4, Blocks.dirt);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 5, Blocks.dirt);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 4, Blocks.dirt);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 8, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 2, Blocks.planks);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 4, Blocks.dirt);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 5, Blocks.dirt);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 6, Blocks.dirt);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 7, Blocks.dirt);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 2, Blocks.planks);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 4, Blocks.dirt);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 6, Blocks.dirt);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 7, Blocks.dirt);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 9, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 4, Blocks.dirt);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 5, Blocks.cobblestone);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 6, Blocks.dirt);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 7, Blocks.dirt);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 4, Blocks.dirt);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 6, Blocks.dirt);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 7, Blocks.dirt);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord +10, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord +10, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord +10, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord +10, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord +10, yCoord, zCoord + 4, Blocks.dirt);
-			world.setBlock(xCoord +10, yCoord, zCoord + 5, Blocks.cobblestone);
-			world.setBlock(xCoord +10, yCoord, zCoord + 6, Blocks.dirt);
-			world.setBlock(xCoord +10, yCoord, zCoord + 7, Blocks.dirt);
-			world.setBlock(xCoord +10, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 4, Blocks.dirt);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 6, Blocks.dirt);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 7, Blocks.dirt);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord +11, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord +11, yCoord, zCoord + 1, Blocks.dirt);
-			world.setBlock(xCoord +11, yCoord, zCoord + 2, Blocks.dirt);
-			world.setBlock(xCoord +11, yCoord, zCoord + 3, Blocks.dirt);
-			world.setBlock(xCoord +11, yCoord, zCoord + 4, Blocks.cobblestone);
-			world.setBlock(xCoord +11, yCoord, zCoord + 5, Blocks.dirt);
-			world.setBlock(xCoord +11, yCoord, zCoord + 6, Blocks.dirt);
-			world.setBlock(xCoord +11, yCoord, zCoord + 7, Blocks.dirt);
-			world.setBlock(xCoord +11, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 1, Blocks.dirt);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 2, Blocks.dirt);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 3, Blocks.dirt);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 4, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 5, Blocks.dirt);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 6, Blocks.dirt);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 7, Blocks.dirt);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 8, Blocks.cobblestone);
 			
 			for(int i = 0; i < 9; i++)
-				{ world.setBlock(xCoord + 12, yCoord, zCoord, Blocks.cobblestone); }
+				{ genHelper.setBlock(xCoord + 12, yCoord, zCoord, Blocks.cobblestone); }
 			
 			// Layer 2 Generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 4, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 4, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.log);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.fence);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 3, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 4, Blocks.cobblestone);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 7, Blocks.air);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.fence);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 3, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 4, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 7, Blocks.air);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 3, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 4, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 5, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 6, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 7, Blocks.air);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 3, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 4, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 5, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 6, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 7, Blocks.air);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 2, Blocks.air);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 3, Blocks.air);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 4, Blocks.air);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 5, Blocks.air);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 6, Blocks.air);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 3, Blocks.air);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 4, Blocks.air);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 5, Blocks.air);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 6, Blocks.air);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.log);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.fence);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.fence);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.air);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 4, Blocks.air);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 5, Blocks.air);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 6, Blocks.fence);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 7, Blocks.air);
-			world.setBlock(xCoord + 4, yCoord, zCoord + 8, Blocks.air);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 1, Blocks.fence);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 2, Blocks.fence);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.air);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 4, Blocks.air);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 5, Blocks.air);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 6, Blocks.fence);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 7, Blocks.air);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 8, Blocks.air);
 			
-			world.setBlock(xCoord + 5, yCoord, zCoord + 0, Blocks.fence);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 2, Blocks.air);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 3, Blocks.air);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 4, Blocks.air);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 5, Blocks.air);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 6, Blocks.air);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 7, Blocks.air);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 0, Blocks.fence);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 3, Blocks.air);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 4, Blocks.air);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 5, Blocks.air);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 6, Blocks.air);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 7, Blocks.air);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 6, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 2, Blocks.air);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 3, Blocks.cobblestone);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 4, Blocks.air);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 5, Blocks.air);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 6, Blocks.air);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 7, Blocks.air);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 4, Blocks.air);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 5, Blocks.air);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 6, Blocks.air);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 7, Blocks.air);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 7, yCoord, zCoord + 0, Blocks.fence);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 2, Blocks.air);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 3, Blocks.air);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 4, Blocks.air);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 5, Blocks.air);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 6, Blocks.air);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 0, Blocks.fence);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 3, Blocks.air);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 4, Blocks.air);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 5, Blocks.air);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 6, Blocks.air);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 8, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 2, Blocks.air);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 3, Blocks.fence);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 4, Blocks.air);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 5, Blocks.cobblestone);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 6, Blocks.fence);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 7, Blocks.air);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 3, Blocks.fence);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 4, Blocks.air);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 6, Blocks.fence);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 7, Blocks.air);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.log);
 			
-			world.setBlock(xCoord + 9, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 2, Blocks.air);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 3, Blocks.air);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 4, Blocks.planks);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 5, Blocks.air);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 6, Blocks.air);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 7, Blocks.air);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 3, Blocks.air);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 4, Blocks.planks);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 5, Blocks.air);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 6, Blocks.air);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 7, Blocks.air);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord +10, yCoord, zCoord + 0, Blocks.fence);
-			world.setBlock(xCoord +10, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord +10, yCoord, zCoord + 2, Blocks.air);
-			world.setBlock(xCoord +10, yCoord, zCoord + 3, Blocks.air);
-			world.setBlock(xCoord +10, yCoord, zCoord + 4, Blocks.air);
-			world.setBlock(xCoord +10, yCoord, zCoord + 5, Blocks.air);
-			world.setBlock(xCoord +10, yCoord, zCoord + 6, Blocks.air);
-			world.setBlock(xCoord +10, yCoord, zCoord + 7, Blocks.air);
-			world.setBlock(xCoord +10, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 0, Blocks.fence);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 3, Blocks.air);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 4, Blocks.air);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 5, Blocks.air);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 6, Blocks.air);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 7, Blocks.air);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord +11, yCoord, zCoord + 0, Blocks.air);
-			world.setBlock(xCoord +11, yCoord, zCoord + 1, Blocks.air);
-			world.setBlock(xCoord +11, yCoord, zCoord + 2, Blocks.air);
-			world.setBlock(xCoord +11, yCoord, zCoord + 3, Blocks.cobblestone);
-			world.setBlock(xCoord +11, yCoord, zCoord + 4, Blocks.air);
-			world.setBlock(xCoord +11, yCoord, zCoord + 5, Blocks.air);
-			world.setBlock(xCoord +11, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord +11, yCoord, zCoord + 7, Blocks.air);
-			world.setBlock(xCoord +11, yCoord, zCoord + 8, Blocks.air);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 0, Blocks.air);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 1, Blocks.air);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 2, Blocks.air);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 4, Blocks.air);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 5, Blocks.air);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 7, Blocks.air);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 8, Blocks.air);
 			
-			world.setBlock(xCoord +12, yCoord, zCoord + 1, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 3, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 4, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 4, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 8, Blocks.log);
 			
 			// Layer 3 Generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 4, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 4, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.log);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.log);
 			
-			world.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.log);
 			
-			world.setBlock(xCoord + 9, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord +12, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 3, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 4, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 3, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 4, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 8, Blocks.log);
 			
 			// Layer 4 Generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 6, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 6, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.log);
 			
-			world.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.log);
 			
-			world.setBlock(xCoord +12, yCoord, zCoord + 3, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 4, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 7, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 3, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 4, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 8, Blocks.log);
 			
 			 // Layer 5 Generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.log);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.oak_stairs);
-			world.setBlockMetadataWithNotify(xCoord + 1, yCoord, zCoord + 0, 5, 2);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.planks);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.planks);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.planks);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 6, Blocks.planks);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 7, Blocks.planks);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.oak_stairs, 5);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 1, Blocks.planks);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 2, Blocks.planks);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.planks);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 6, Blocks.planks);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 7, Blocks.planks);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord + 6, Blocks.planks);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 7, Blocks.planks);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 6, Blocks.planks);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 7, Blocks.planks);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.oak_stairs);
-			world.setBlockMetadataWithNotify(xCoord + 3, yCoord, zCoord + 0, 4, 2);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 7, Blocks.planks);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.oak_stairs, 4);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 7, Blocks.planks);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord + 7, Blocks.planks);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 7, Blocks.planks);
 			
-			world.setBlock(xCoord + 5, yCoord, zCoord + 0, Blocks.oak_stairs);
-			world.setBlockMetadataWithNotify(xCoord + 5, yCoord, zCoord + 0, 5, 2);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 0, Blocks.oak_stairs, 5);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.log);
 			
-			world.setBlock(xCoord + 9, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord +10, yCoord, zCoord + 5, Blocks.planks);
+			genHelper.setBlock(xCoord +10, yCoord, zCoord + 5, Blocks.planks);
 
-			world.setBlock(xCoord +11, yCoord, zCoord + 5, Blocks.planks);
-			world.setBlock(xCoord +11, yCoord, zCoord + 6, Blocks.planks);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 5, Blocks.planks);
+			genHelper.setBlock(xCoord +11, yCoord, zCoord + 6, Blocks.planks);
 			
-			world.setBlock(xCoord +12, yCoord, zCoord + 4, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 7, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 4, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 7, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 8, Blocks.log);
 			
 			// Layer 6 Generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord - 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 9, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 9, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.log);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 7, Blocks.chest);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord - 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 7, Blocks.chest);
 			
 			TileEntityChest chest = (TileEntityChest) world.getTileEntity(xCoord + 1, yCoord, zCoord + 7);
 			ItemStack loot = getChestLoot(random, this.getLoot());
 			if(loot != null)
 				chest.setInventorySlotContents(random.nextInt(chest.getSizeInventory()), loot);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.log);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 9, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 9, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.log);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.log);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 9, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord - 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 9, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord - 1, Blocks.cobblestone);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.log);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 8, Blocks.log);
-			world.setBlock(xCoord + 3, yCoord, zCoord + 9, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord - 1, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.log);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 9, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord + 9, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 9, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 5, yCoord, zCoord + 8, Blocks.log);
-			world.setBlock(xCoord + 5, yCoord, zCoord + 9, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 9, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.log);
-			world.setBlock(xCoord + 6, yCoord, zCoord + 9, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 9, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.log);
-			world.setBlock(xCoord + 7, yCoord, zCoord + 9, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 9, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.log);
-			world.setBlock(xCoord + 8, yCoord, zCoord + 9, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 9, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 9, yCoord, zCoord + 8, Blocks.log);
-			world.setBlock(xCoord + 9, yCoord, zCoord + 9, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 8, Blocks.log);
+			genHelper.setBlock(xCoord + 9, yCoord, zCoord + 9, Blocks.cobblestone);
 			
-			world.setBlock(xCoord +12, yCoord, zCoord + 4, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.log);
-			world.setBlock(xCoord +12, yCoord, zCoord + 7, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 4, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.log);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 7, Blocks.log);
 			
 			// Layer 7 Generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 7, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 3, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 5, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 6, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 7, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 8, yCoord, zCoord + 8, Blocks.cobblestone);
 			
-			world.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
-			world.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 6, Blocks.cobblestone);
 			
 			// Layer 8 Generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.cobblestone);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
-			world.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.log);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 0, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 2, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 2, yCoord, zCoord + 7, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 4, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 7, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 5, yCoord, zCoord + 7, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 5, yCoord, zCoord + 7, Blocks.cobblestone);
 			
-			world.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
 			
 			// Layer 9 Generation
 			
 			yCoord++;
 			
-			world.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.cobblestone);
 			
-			world.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.cobblestone);
 			
-			world.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
+			genHelper.setBlock(xCoord +12, yCoord, zCoord + 5, Blocks.cobblestone);
 			
 			return true;
 		}

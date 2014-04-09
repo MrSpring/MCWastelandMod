@@ -9,6 +9,8 @@ import cpw.mods.fml.common.IWorldGenerator;
 
 public class RuinLightposts extends Ruin implements IWorldGenerator
 {
+	private RuinGenHelper genHelper = new RuinGenHelper();
+	
 	public RuinLightposts(String par1Name)
 	{
 		super(par1Name);
@@ -26,31 +28,31 @@ public class RuinLightposts extends Ruin implements IWorldGenerator
 		
 		if ((world.getBlock(xCoord, yCoord - 1, zCoord) == Blocks.dirt) && (!material0.isSolid()) && (!material1.isSolid()) && (!material4.isSolid()) && (!material2.isSolid()) && (!material3.isSolid()) && (!material5.isSolid()))
 		{
-			world.setBlock(xCoord, yCoord, zCoord, Blocks.fence);
-			world.setBlock(xCoord, yCoord + 1, zCoord, Blocks.fence);
-			world.setBlock(xCoord, yCoord + 2, zCoord, Blocks.fence);
-			world.setBlock(xCoord, yCoord + 3, zCoord, Blocks.fence);
+			genHelper.setBlock(xCoord, yCoord, zCoord, Blocks.fence);
+			genHelper.setBlock(xCoord, yCoord + 1, zCoord, Blocks.fence);
+			genHelper.setBlock(xCoord, yCoord + 2, zCoord, Blocks.fence);
+			genHelper.setBlock(xCoord, yCoord + 3, zCoord, Blocks.fence);
 			
 			int direction = random.nextInt(4);
 			if (direction == 0)
 			{
-				world.setBlock(xCoord - 1, yCoord + 3, zCoord, Blocks.fence);
-				world.setBlock(xCoord - 1, yCoord + 2, zCoord, Blocks.glowstone);
+				genHelper.setBlock(xCoord - 1, yCoord + 3, zCoord, Blocks.fence);
+				genHelper.setBlock(xCoord - 1, yCoord + 2, zCoord, Blocks.glowstone);
 			}
 			if (direction == 1)
 			{
-				world.setBlock(xCoord + 1, yCoord + 3, zCoord, Blocks.fence);
-				world.setBlock(xCoord + 1, yCoord + 2, zCoord, Blocks.glowstone);
+				genHelper.setBlock(xCoord + 1, yCoord + 3, zCoord, Blocks.fence);
+				genHelper.setBlock(xCoord + 1, yCoord + 2, zCoord, Blocks.glowstone);
 			}
 			if (direction == 2)
 			{
-				world.setBlock(xCoord, yCoord + 3, zCoord - 1, Blocks.fence);
-				world.setBlock(xCoord, yCoord + 2, zCoord - 1, Blocks.glowstone);
+				genHelper.setBlock(xCoord, yCoord + 3, zCoord - 1, Blocks.fence);
+				genHelper.setBlock(xCoord, yCoord + 2, zCoord - 1, Blocks.glowstone);
 			}
 			if (direction == 3)
 			{
-				world.setBlock(xCoord, yCoord + 3, zCoord + 1, Blocks.fence);
-				world.setBlock(xCoord, yCoord + 2, zCoord + 1, Blocks.glowstone);
+				genHelper.setBlock(xCoord, yCoord + 3, zCoord + 1, Blocks.fence);
+				genHelper.setBlock(xCoord, yCoord + 2, zCoord + 1, Blocks.glowstone);
 			}
 			return true;
 		}

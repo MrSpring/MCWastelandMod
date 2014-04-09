@@ -42,6 +42,8 @@ public class RuinBarnHouse extends Ruin implements IWorldGenerator
 		{
 			System.out.println("Successfully generated Barn at: " + ModHelper.getCoordAsString(xCoord, zCoord) + ".");
 			
+			this.genHelper.setWorld(world);
+			
 			xCoord -= 6;
 			zCoord -= 4;
 			

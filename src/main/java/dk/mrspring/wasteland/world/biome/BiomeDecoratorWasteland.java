@@ -1,17 +1,17 @@
 package dk.mrspring.wasteland.world.biome;
 
+import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.CUSTOM;
+
 import java.util.Random;
 
-import dk.mrspring.wasteland.ModConfig;
-import dk.mrspring.wasteland.world.gen.WorldGenRandomFire;
-import dk.mrspring.wasteland.world.gen.WorldGenRandomRubble;
-import dk.mrspring.wasteland.world.gen.WorldGenWastelandBigTree;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.event.terraingen.TerrainGen;
-import static net.minecraftforge.event.terraingen.DecorateBiomeEvent.Decorate.EventType.*;
+import dk.mrspring.wasteland.world.gen.WorldGenRandomFire;
+import dk.mrspring.wasteland.world.gen.WorldGenRandomRubble;
+import dk.mrspring.wasteland.world.gen.WorldGenWastelandBigTree;
 
 public class BiomeDecoratorWasteland extends BiomeDecorator
 {
@@ -32,7 +32,7 @@ public class BiomeDecoratorWasteland extends BiomeDecorator
 		
 		this.firePerChunk = 5;
 		this.rubblePerChunk = 1;
-		this.deadTreePerChunk = ModConfig.wastelandTreesPreChunk;
+		this.deadTreePerChunk = 1;
 		
 		this.flowersPerChunk = -999;
 		this.grassPerChunk = -999;
@@ -87,12 +87,9 @@ public class BiomeDecoratorWasteland extends BiomeDecorator
 		doGen = TerrainGen.decorate(currentWorld, randomGenerator, chunk_X, chunk_Z, CUSTOM);
 		for(int i = 0; doGen && i < deadTreePerChunk; i++)
 		{
-			if (randomGenerator.nextInt(4) == 1)
-			{
-				x = chunk_X + randomGenerator.nextInt(16) + 8;
-				z = chunk_Z + randomGenerator.nextInt(16) + 8;
-				this.deadTreeGen.generate(currentWorld, randomGenerator, x, this.currentWorld.getHeightValue(x, z), z);
-			}
+			x = chunk_X + randomGenerator.nextInt(16) + 8;
+			z = chunk_Z + randomGenerator.nextInt(16) + 8;
+			this.deadTreeGen.generate(currentWorld, randomGenerator, x, this.currentWorld.getHeightValue(x, z), z);
 		}
 	}
 }

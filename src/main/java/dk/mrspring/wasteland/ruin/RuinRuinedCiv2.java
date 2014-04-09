@@ -19,6 +19,8 @@ public class RuinRuinedCiv2 extends Ruin implements IWorldGenerator
 
 	public boolean generate(World world, Random random, int i, int j, int k)
 	{
+		this.genHelper.setWorld(world);
+		
 		byte byte0 = 3;
 		int l = random.nextInt(2) + 2;
 		int i1 = random.nextInt(2) + 2;

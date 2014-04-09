@@ -19,6 +19,8 @@ public class RuinTreeHouse extends Ruin implements IWorldGenerator
 	
 	public boolean generate(World world, Random random, int x, int y, int z)
 	{
+		this.genHelper.setWorld(world);
+		
 		Material material = world.getBlock(x, y, z).getMaterial();
 		
 		if(material.isSolid() && world.getBlock(x, y, z) != Blocks.netherrack && world.getBlock(x, y, z) != Blocks.fire)

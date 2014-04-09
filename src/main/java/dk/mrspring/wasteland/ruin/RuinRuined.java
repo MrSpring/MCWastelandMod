@@ -19,6 +19,8 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 	
 	public boolean generate(World world, Random rand, int x, int y, int z)
 	{
+		this.genHelper.setWorld(world);
+		
 		Material material1 = world.getBlock(x + 0, y, z + 0).getMaterial();
 		
 		Material material2  = world.getBlock(x + 2, y, z - 4).getMaterial();

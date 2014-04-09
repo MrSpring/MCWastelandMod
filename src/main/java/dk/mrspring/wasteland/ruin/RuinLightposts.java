@@ -19,6 +19,8 @@ public class RuinLightposts extends Ruin implements IWorldGenerator
 	@Override
 	protected boolean generate(World world, Random random, int xCoord, int yCoord, int zCoord)
 	{
+		this.genHelper.setWorld(world);
+		
 		Material material0 = world.getBlock(xCoord, yCoord + 1, zCoord).getMaterial();
 		Material material1 = world.getBlock(xCoord, yCoord, zCoord).getMaterial();
 		Material material2 = world.getBlock(xCoord + 1, yCoord, zCoord).getMaterial();

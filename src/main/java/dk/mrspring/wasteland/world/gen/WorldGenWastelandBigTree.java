@@ -339,7 +339,7 @@ public class WorldGenWastelandBigTree extends WorldGenBigTree
 	boolean validTreeLocation()
 	{
 		int i = rand.nextInt(100);
-		if(!(i >= ModConfig.wastelandTreesPreChunk))
+		if(!(i >= ModConfig.wastelandTreeSpawnRate))
 		{
 			Block var3 = worldObj.getBlock(basePos[0], basePos[1] - 1, basePos[2]);
 			

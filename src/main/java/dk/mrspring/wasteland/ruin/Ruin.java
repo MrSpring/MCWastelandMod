@@ -2,16 +2,22 @@ package dk.mrspring.wasteland.ruin;
 
 import java.util.Random;
 
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import dk.mrspring.wasteland.ModConfig;
 import dk.mrspring.wasteland.Wasteland;
 import dk.mrspring.wasteland.WastelandBiomes;
+import dk.mrspring.wasteland.ModHelper.ModInfo;
+import dk.mrspring.wasteland.client.ItemRuinIcon;
 import dk.mrspring.wasteland.world.WorldTypeWasteland;
-import dk.mrspring.wasteland.world.gen.WastelandGeneratorInfo;
 
 public class Ruin
 {
@@ -19,6 +25,8 @@ public class Ruin
 	protected int id;
 	protected int rarity = 1;
 	protected int weight = 10;
+	@SideOnly(Side.CLIENT)
+	protected Item icon;
 	protected ItemStack[] loot;
 	
 	public static Ruin[] ruins = new Ruin[32];
@@ -53,7 +61,18 @@ public class Ruin
 		this.id = nextID();
 		this.ruins[this.id] = this;
 		
+		if (ModConfig.useIconsOnCustomize)
+		{
+			GameRegistry.registerItem(new ItemRuinIcon(par1Name), par1Name);
+			icon = GameRegistry.findItem(ModInfo.modid, par1Name);
+		}
+		
 		GameRegistry.registerWorldGenerator(this.toIWorldGenerator(), this.weight);
+	}
+	
+	public Item getIcon()
+	{
+		return this.icon;
 	}
 	
 	private int nextID()

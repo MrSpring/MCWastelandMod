@@ -7,13 +7,12 @@ createworld.customize.wasteland.disabled=Disabled
 createworld.customize.wasteland.default=Reset to Default
 
 generator.wasteland=Wasteland
-generator.wasteland.info=You are using a development version of the mod. Bugs may occur.
 
-ruin.lightposts.name=Lightpost
-ruin.ruined_civ_1.name=Ruined Civ 1
-ruin.ruined_civ_2.name=Ruined Civ 2
+ruin.lightposts.name=Light post
+ruin.ruined_civ_1.name=Civilian Residence
+ruin.ruined_civ_2.name=Library
 ruin.tent.name=Survivor Tent
-ruin.barn_house.name=Barn
+ruin.barn_house.name=Farm House
 ruin.tree_house.name=Tree House
-ruin.ruined.name=Ruined Temple of Sorts
+ruin.ruined.name=Abandoned Temple
 ruin.spawner.name=Spawner

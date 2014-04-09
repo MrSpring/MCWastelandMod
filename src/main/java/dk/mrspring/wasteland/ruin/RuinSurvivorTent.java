@@ -19,6 +19,8 @@ public class RuinSurvivorTent extends Ruin implements IWorldGenerator
 	
 	public boolean generate(World world, Random random, int x, int y, int z)
 	{
+		this.genHelper.setWorld(world);
+		
 		Material material = world.getBlock(x, y, z).getMaterial();
 		Material material1 = world.getBlock(x, y + 1, z).getMaterial();
 		Material material2 = world.getBlock(x + 1, y + 1, z).getMaterial();

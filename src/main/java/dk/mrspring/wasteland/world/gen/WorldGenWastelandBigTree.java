@@ -371,7 +371,6 @@ public class WorldGenWastelandBigTree extends WorldGenBigTree
 			this.generateLeaves();
 			this.generateTrunk();
 			this.generateLeafNodeBases();
-			System.out.println(" Successful Tree Generation at: " + ModHelper.getCoordAsString(basePos[0], basePos[1], basePos[2]));
 			return true;
 		}
 	}

@@ -47,11 +47,11 @@ public class Ruin
 		lightposts = new RuinLightposts("lightposts").setRarity(RuinConfig.lightpostsRarity);
 		ruinedCiv1 = new RuinRuinedCiv1("ruined_civ_1").setRarity(RuinConfig.ruinedCiv1Rarity).setLoot(RuinConfig.getLoot(RuinConfig.ruinedCiv1LootRaw));
 		ruinedCiv2 = new RuinRuinedCiv2("ruined_civ_2").setRarity(RuinConfig.ruinedCiv2Rarity);
-		survivorTent = new RuinSurvivorTent("tent").setRarity(RuinConfig.survivorTentRarity);
+		survivorTent = new RuinSurvivorTent("tent").setRarity(RuinConfig.survivorTentRarity).setLoot(RuinConfig.getLoot(RuinConfig.tentLootRaw));
 		barnHouse = new RuinBarnHouse("barn_house").setRarity(RuinConfig.barnHouseRarity).setLoot(RuinConfig.getLoot(RuinConfig.barnHouseLootRaw));
-		treeHouse = new RuinTreeHouse("tree_house").setRarity(RuinConfig.treeHouseRarity);
-		ruined = new RuinRuined("ruined").setRarity(RuinConfig.ruinedRarity);
-		spawner = new RuinSpawner("spawner").setRarity(1);
+		treeHouse = new RuinTreeHouse("tree_house").setRarity(RuinConfig.treeHouseRarity).setLoot(RuinConfig.getLoot(RuinConfig.treeHouseLootRaw));
+		ruined = new RuinRuined("ruined").setRarity(RuinConfig.ruinedRarity).setLoot(RuinConfig.getLoot(RuinConfig.ruinedLootRaw));
+		spawner = new RuinSpawner("spawner").setRarity(RuinConfig.spawnerRarity).setLoot(RuinConfig.getLoot(RuinConfig.spawnerLootRaw));
 	}
 	
 	public Ruin(String par1Name)

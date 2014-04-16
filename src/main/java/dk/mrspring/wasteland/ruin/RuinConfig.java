@@ -14,6 +14,10 @@ public class RuinConfig
 	public static String[] ruinedCiv1LootRaw;
 	public static String[] barnHouseLootRaw;
 	public static String[] ruinedLootRaw;
+	public static String[] spawnerLootRaw;
+	public static String[] treeHouseLootRaw;
+	public static String[] tentLootRaw;
+	
 	public static int lightpostsRarity;
 	public static int randomFireRarity;
 	public static int ruinedCiv1Rarity;
@@ -29,10 +33,12 @@ public class RuinConfig
 	{
 		config.load();
 			ruinedCiv1LootRaw = config.get("Items", "Ruined Civ 1 chest items", new String[] { "minecraft:mushroom_stew", "minecraft:stick", "minecraft:bread", "minecraft:wheat", "minecraft:gunpowder", "minecraft:string", "minecraft:water_bucket", "minecraft:planks", "minecraft:redstone", "minecraft:record_blocks", "minecraft:record_strad", "minecraft:dye" }).getStringList(); 
-			//{ String.valueOf(Item.getIdFromItem(Items.mushroom_stew)), String.valueOf(Item.getIdFromItem(Items.stick)), String.valueOf(Item.getIdFromItem(Items.bread)), String.valueOf(Item.getIdFromItem(Items.wheat)), String.valueOf(Item.getIdFromItem(Items.gunpowder)), String.valueOf(Item.getIdFromItem(Items.string)), String.valueOf(Item.getIdFromItem(Items.water_bucket)), String.valueOf(Block.getIdFromBlock(Blocks.planks)), String.valueOf(Item.getIdFromItem(Items.redstone)), String.valueOf(Item.getIdFromItem(Items.record_blocks)), String.valueOf(Item.getIdFromItem(Items.record_strad)), String.valueOf(Item.getIdFromItem(Items.dye)) }).getStringList();
 			barnHouseLootRaw = config.get("Items", "Barn House chest items", new String[] { "minecraft:wheat", "minecraft:apple", "minecraft:bread", "minecraft:water_bucket", "minecraft:hay_block", "minecraft:wheat_seeds" }).getStringList();
-			//{ String.valueOf(Item.getIdFromItem(Items.wheat)), String.valueOf(Item.getIdFromItem(Items.apple)), String.valueOf(Item.getIdFromItem(Items.bread)), String.valueOf(Item.getIdFromItem(Items.water_bucket)), String.valueOf(Block.getIdFromBlock(Blocks.hay_block)), String.valueOf(Item.getIdFromItem(Items.wheat_seeds)) }).getStringList();
-			ruinedLootRaw = config.get("Items", "Abandoned Temple chest items", new String[] { "minecraft:bucket_water", "minecraft:diamond", "minecraft:gold", "minecraft:iron", "minecraft:char_coal" }).getStringList();
+			ruinedLootRaw = config.get("Items", "Abandoned Temple chest items", new String[] { "minecraft:water_bucket", "minecraft:diamond", "minecraft:gold_ingot", "minecraft:iron_ingot", "minecraft:coal", "minecraft:bread", "minecraft:redstone", "minecraft:iron_helmet", "minecraft:record_wait" }).getStringList();
+			spawnerLootRaw = config.get("Items", "Spawner chest items", new String[] { "minecraft:rotten_flesh", "minecraft:bucket", "minecraft:spider_eye", "minecraft:record_chirp", "minecraft:name_tag", "minecraft:potato", "minecraft:carrot", "minecraft:feather", "minecraft:leather_chestplate" }).getStringList();
+			treeHouseLootRaw = config.get("Items", "Tree House chest items", new String[] { "minecraft:apple", "minecraft:stone_axe", "minecraft:log", "minecraft:milk_bucket" }).getStringList();
+			tentLootRaw = config.get("Items", "Tent chest items", new String[] { "minecraft:flint_and_steel", "minecraft:cooked_porkchop", "minecraft:cooked_beef", "minecraft:bucket", "minecraft:wheat", "minecraft:cobblestone", "minecraft:map", "minecraft:compass" }).getStringList();
+			
 			lightpostsRarity = config.get("Rarity", "Lightposts Rarity", 10).getInt(10);
 			ruinedCiv1Rarity = config.get("Rarity", "Ruined Civ 1 Rarity", 4).getInt(4);
 			ruinedCiv2Rarity = config.get("Rarity", "Ruined Civ 2 Rarity", 3).getInt(3);

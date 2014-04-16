@@ -3,6 +3,9 @@ package dk.mrspring.wasteland.ruin;
 import java.util.Random;
 
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.IWorldGenerator;
 import dk.mrspring.wasteland.ModHelper;
@@ -68,7 +71,11 @@ public class RuinSpawner extends Ruin implements IWorldGenerator
 			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 0, Blocks.air);
 			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 3, Blocks.stonebrick, 2);
 			genHelper.setBlock(xCoord + 4, yCoord, zCoord + 4, Blocks.chest);
-			// TODO: Chest Loot for: Spawner
+			
+			TileEntityChest chest = (TileEntityChest) world.getTileEntity(xCoord + 4, yCoord, zCoord + 4);
+			ItemStack item = getLootItem(random, this.getLoot());
+			if (item != null)
+				chest.setInventorySlotContents(random.nextInt(chest.getSizeInventory()), item);
 			
 			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 0, Blocks.stonebrick, 2);
 			genHelper.setBlock(xCoord + 3, yCoord, zCoord + 1, Blocks.air);
@@ -346,15 +353,14 @@ public class RuinSpawner extends Ruin implements IWorldGenerator
 			genHelper.setBlock(xCoord + 1, yCoord, zCoord + 5, Blocks.stonebrick, 2);
 			
 			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick);
-			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick, 2);
-			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick, 2);
-			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick, 2);
-			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick, 2);
-			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick, 2);
-			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick, 2);
-			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick, 2);
-			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick, 2);
-			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 3, Blocks.stonebrick);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord - 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 0, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 1, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 2, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 3, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 4, Blocks.stonebrick, 2);
+			genHelper.setBlock(xCoord + 0, yCoord, zCoord + 5, Blocks.stonebrick);
 			
 			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 3, Blocks.stonebrick);
 			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.stonebrick, 2);
@@ -554,5 +560,23 @@ public class RuinSpawner extends Ruin implements IWorldGenerator
 		}
 		
 		return false;
+	}
+	
+	private static ItemStack getLootItem(Random rand, ItemStack[] items)
+	{
+		int i = rand.nextInt(items.length);
+		
+		ItemStack itemStack = new ItemStack(items[i].getItem(), 1);
+		
+		if(itemStack.getItem() == Items.rotten_flesh) return new ItemStack(itemStack.getItem(), rand.nextInt(4) + 2);
+		else if(itemStack.getItem() == Items.bucket) return new ItemStack(itemStack.getItem(), rand.nextInt(3) + 1);
+		else if(itemStack.getItem() == Items.spider_eye) return new ItemStack(itemStack.getItem(), rand.nextInt(5) + 1);
+		else if(itemStack.getItem() == Items.record_chirp) return new ItemStack(itemStack.getItem(), 1);
+		else if(itemStack.getItem() == Items.name_tag) return new ItemStack(itemStack.getItem(), rand.nextInt(1) + 1);
+		else if(itemStack.getItem() == Items.potato) return new ItemStack(itemStack.getItem(), rand.nextInt(2) + 1);
+		else if(itemStack.getItem() == Items.carrot) return new ItemStack(itemStack.getItem(), rand.nextInt(2) + 1);
+		else if(itemStack.getItem() == Items.feather) return new ItemStack(itemStack.getItem(), rand.nextInt(9) + 4);
+		else if(itemStack.getItem() == Items.leather_chestplate) return new ItemStack(itemStack.getItem(), 1, itemStack.getMaxDamage() - rand.nextInt(itemStack.getMaxDamage() / 2));
+		else return itemStack;
 	}
 }

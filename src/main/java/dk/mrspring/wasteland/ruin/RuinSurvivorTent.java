@@ -5,6 +5,10 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.IWorldGenerator;
 
@@ -53,7 +57,12 @@ public class RuinSurvivorTent extends Ruin implements IWorldGenerator
 			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 2, Blocks.dirt);
 			genHelper.setBlock(xCoord - 1, yCoord, zCoord - 1, Blocks.dirt);
 			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 0, Blocks.chest);
-			// TODO: Chest Loot for: Tent
+			
+			TileEntityChest chest = (TileEntityChest) world.getTileEntity(xCoord - 1, yCoord, zCoord);
+			ItemStack item = getLootItem(random, this.getLoot());
+			if (item != null)
+				chest.setInventorySlotContents(random.nextInt(chest.getSizeInventory()), item);
+			
 			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 1, Blocks.dirt);
 			genHelper.setBlock(xCoord - 1, yCoord, zCoord + 2, Blocks.dirt);
 			
@@ -185,5 +194,22 @@ public class RuinSurvivorTent extends Ruin implements IWorldGenerator
 			return true;
 		}
 		return false;
+	}
+	
+	private ItemStack getLootItem(Random rand, ItemStack[] itemStacks)
+	{
+		int i = rand.nextInt(itemStacks.length);
+		
+		ItemStack item = new ItemStack(itemStacks[i].getItem(), 1);
+		
+		if (item.getItem() == Items.flint_and_steel) return new ItemStack(item.getItem(), 1, item.getMaxDamage() - rand.nextInt(item.getMaxDamage()));
+		else if(item.getItem() == Items.cooked_porkchop) return new ItemStack(item.getItem(), rand.nextInt(3) + 1);
+		else if(item.getItem() == Items.cooked_beef) return new ItemStack(item.getItem(), rand.nextInt(1) + 1);
+		else if(item.getItem() == Items.bucket) return new ItemStack(item.getItem(), rand.nextInt(1) + 1);
+		else if(item.getItem() == Items.wheat) return new ItemStack(item.getItem(), rand.nextInt(3) + 2);
+		else if(item.getItem() == Item.getItemFromBlock(Blocks.cobblestone)) return new ItemStack(item.getItem(), rand.nextInt(16) + 10);
+		else if(item.getItem() == Items.map && rand.nextInt(4) == 0) return new ItemStack(item.getItem(), 1);
+		else if(item.getItem() == Items.compass && rand.nextInt(2) == 0) return new ItemStack(item.getItem(), 1);
+		else return item;
 	}
 }

@@ -120,20 +120,6 @@ public class GuiCreateWastelandWorld extends GuiScreen
 			super(GuiCreateWastelandWorld.this.mc, GuiCreateWastelandWorld.this.width, GuiCreateWastelandWorld.this.height, 43, GuiCreateWastelandWorld.this.height - 60, 24);
 		}
 		
-		private void renderItemIcon(int x, int y, ItemStack item)
-		{
-			GL11.glEnable(GL12.GL_RESCALE_NORMAL);
-
-			if (item != null)
-			{
-				RenderHelper.enableGUIStandardItemLighting();
-				GuiCreateWastelandWorld.this.itemRenderer.renderItemIntoGUI(GuiCreateWastelandWorld.this.fontRendererObj, GuiCreateWastelandWorld.this.mc.getTextureManager(), item, x + 2, y + 2);
-				RenderHelper.disableStandardItemLighting();
-			}
-
-			GL11.glDisable(GL12.GL_RESCALE_NORMAL);
-		}
-		
 		@Override
 		protected int getSize()
 		{
@@ -167,8 +153,6 @@ public class GuiCreateWastelandWorld extends GuiScreen
 			if(GuiCreateWastelandWorld.this.generatorInfo.getRarity(var1) == 0) rarity = StatCollector.translateToLocal("createworld.customize.wasteland.disabled");
 			
 			GuiCreateWastelandWorld.this.fontRendererObj.drawString(rarity, x + 2 + 213 - GuiCreateWastelandWorld.this.fontRendererObj.getStringWidth(rarity), y + 6, 16777215);
-			
-			if (ModConfig.useIconsOnCustomize) this.renderItemIcon(x - 23, y, new ItemStack(Ruin.ruins[var1].getIcon()));
 		}
 		
 		@Override

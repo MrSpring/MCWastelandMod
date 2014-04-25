@@ -23,6 +23,8 @@ public class RuinBarnHouse extends Ruin implements IWorldGenerator
 	
 	public boolean generate(World world, Random random, int x, int y, int z)
 	{
+		genHelper.setWorld(world);
+		
 		/*	  	  A X+
 		 *		  |
 		 *  Z- <-- --> Z+
@@ -40,14 +42,12 @@ public class RuinBarnHouse extends Ruin implements IWorldGenerator
 		
 		if(material1.isSolid() && world.getHeightValue(xCoord + 1, zCoord + 1) == yCoord && world.getHeightValue(xCoord, zCoord + 1) == yCoord && world.getHeightValue(xCoord - 1, zCoord + 1) == yCoord && world.getHeightValue(xCoord - 1, zCoord) == yCoord && world.getHeightValue(xCoord - 1, zCoord - 1) == yCoord && world.getHeightValue(xCoord, zCoord - 1) == yCoord && world.getHeightValue(xCoord + 1, zCoord - 1) == yCoord)	// Upper Left Corner
 		{
-			System.out.println("Successfully generated Barn at: " + ModHelper.getCoordAsString(xCoord, zCoord) + ".");
-			
 			this.genHelper.setWorld(world);
 			
 			xCoord -= 6;
 			zCoord -= 4;
 			
-			RuinGenHelper.setCube(xCoord, yCoord + 1, zCoord - 1, 11, 9, 14, world, Blocks.air);
+			RuinGenHelper.setCube(xCoord, yCoord + 1, zCoord - 1, 11, 9, 14, Blocks.air);
 			
 			// Layer 1 Generation
 			

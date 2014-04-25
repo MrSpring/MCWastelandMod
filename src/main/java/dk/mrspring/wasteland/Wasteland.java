@@ -28,8 +28,7 @@ import dk.mrspring.wasteland.world.gen.WorldGenWastelandBigTree;
 @Mod(modid=ModHelper.ModInfo.modid, name=ModHelper.ModInfo.name, version=ModHelper.ModInfo.version, useMetadata = true)
 public class Wasteland
 {
-	public static final WorldType wastelandWorldType = new WorldTypeWasteland("wasteland");
-	public static final WorldGenWastelandBigTree wastelandTree = new WorldGenWastelandBigTree(true);
+	public static WorldType wastelandWorldType;
 	
 	public static int lastID = 0;
 	
@@ -52,6 +51,8 @@ public class Wasteland
 	@EventHandler
 	public static void init(FMLInitializationEvent event)
 	{
+		wastelandWorldType = new WorldTypeWasteland("wasteland");
+		
 		WorldTypeWasteland.genInfo.createDefault();
 	}
 	

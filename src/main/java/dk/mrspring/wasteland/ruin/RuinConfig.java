@@ -33,7 +33,7 @@ public class RuinConfig
 	{
 		config.load();
 			ruinedCiv1LootRaw = config.get("Items", "Ruined Civ 1 chest items", new String[] { "minecraft:mushroom_stew", "minecraft:stick", "minecraft:bread", "minecraft:wheat", "minecraft:gunpowder", "minecraft:string", "minecraft:water_bucket", "minecraft:planks", "minecraft:redstone", "minecraft:record_blocks", "minecraft:record_strad", "minecraft:dye" }).getStringList(); 
-			barnHouseLootRaw = config.get("Items", "Barn House chest items", new String[] { "minecraft:wheat", "minecraft:apple", "minecraft:bread", "minecraft:water_bucket", "minecraft:hay_block", "minecraft:wheat_seeds" }).getStringList();
+			barnHouseLootRaw = config.get("Items", "Barn House chest items", new String[] { "minecraft:wheat", "minecraft:apple", "minecraft:bread", "minecraft:water_bucket", "minecraft:hay_block", "minecraft:wheat_seeds", "minecraft:mushroom_stew" }).getStringList();
 			ruinedLootRaw = config.get("Items", "Abandoned Temple chest items", new String[] { "minecraft:water_bucket", "minecraft:diamond", "minecraft:gold_ingot", "minecraft:iron_ingot", "minecraft:coal", "minecraft:bread", "minecraft:redstone", "minecraft:iron_helmet", "minecraft:record_wait" }).getStringList();
 			spawnerLootRaw = config.get("Items", "Spawner chest items", new String[] { "minecraft:rotten_flesh", "minecraft:bucket", "minecraft:spider_eye", "minecraft:record_chirp", "minecraft:name_tag", "minecraft:potato", "minecraft:carrot", "minecraft:feather", "minecraft:leather_chestplate" }).getStringList();
 			treeHouseLootRaw = config.get("Items", "Tree House chest items", new String[] { "minecraft:apple", "minecraft:stone_axe", "minecraft:log", "minecraft:milk_bucket" }).getStringList();
@@ -45,7 +45,7 @@ public class RuinConfig
 			survivorTentRarity = config.get("Rarity", "Survivor Tent Rarity", 64).getInt(64);
 			barnHouseRarity = config.get("Rarity", "Barn House Rarity", 5).getInt(5);
 			treeHouseRarity = config.get("Rarity", "Tree House Rarity", 64).getInt(64);
-			ruinedRarity = config.get("Rarity", "Ruined Ruin Rarity", 3).getInt(3);
+			ruinedRarity = config.get("Rarity", "Abandoned Temple Rarity", 64).getInt(64);
 			spawnerRarity = config.get("Rarity", "Spawner Rarity", 64).getInt(64);
 		config.save();
 	}

@@ -61,12 +61,6 @@ public class Ruin
 		this.id = nextID();
 		this.ruins[this.id] = this;
 		
-		if (ModConfig.useIconsOnCustomize)
-		{
-			GameRegistry.registerItem(new ItemRuinIcon(par1Name), par1Name);
-			icon = GameRegistry.findItem(ModInfo.modid, par1Name);
-		}
-		
 		GameRegistry.registerWorldGenerator(this.toIWorldGenerator(), this.weight);
 	}
 	

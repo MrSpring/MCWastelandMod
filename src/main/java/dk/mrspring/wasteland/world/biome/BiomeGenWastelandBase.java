@@ -12,7 +12,6 @@ import net.minecraftforge.common.BiomeDictionary;
 public class BiomeGenWastelandBase extends BiomeGenBase
 {
 	public static final BiomeGenBase.Height height_Wasteland = new BiomeGenBase.Height(0.1F, 0.05F);
-	public static final BiomeGenBase.Height height_DriedOcean = new BiomeGenBase.Height(0.1F, 0.05F);
 	
 	private static int lastID = 0;
 	public static BiomeGenBase[] wastelandBiomes = new BiomeGenBase[16];

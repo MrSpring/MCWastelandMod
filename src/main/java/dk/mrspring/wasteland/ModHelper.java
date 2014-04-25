@@ -16,7 +16,7 @@ public class ModHelper
 	{
 		public static final String modid = "WLM";
 		public static final String name = "The Wasteland Mod";
-		public static final String version = "DEV 1.1.0";
+		public static final String version = "1.2.1";
 		public static final boolean isDev = version.contains("DEV");
 	}
 	

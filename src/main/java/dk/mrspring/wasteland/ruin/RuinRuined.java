@@ -57,7 +57,32 @@ public class RuinRuined extends Ruin implements IWorldGenerator
 		 *	  	  V X-
 		 */
 		
-		if(material1.isSolid() && material2.isSolid() && material3.isSolid() && material4.isSolid() && material5.isSolid() && material6.isSolid() && material7.isSolid() && material7.isSolid() && material9.isSolid() && material10.isSolid() && material11.isSolid() && material12.isSolid() && material13.isSolid() && material14.isSolid() && material15.isSolid() && material16.isSolid() && material17.isSolid() && material18.isSolid() && material19.isSolid() && material20.isSolid() && material21.isSolid())
+		if(material1.isSolid() 
+				&& material2.isSolid() 
+				&& material3.isSolid() 
+				&& material4.isSolid() 
+				&& material5.isSolid() 
+				&& material6.isSolid() 
+				&& material7.isSolid() 
+				&& material8.isSolid() 
+				&& material9.isSolid() 
+				&& material10.isSolid() 
+				&& material11.isSolid() 
+				&& material12.isSolid() 
+				&& material13.isSolid() 
+				&& material14.isSolid() 
+				&& material15.isSolid() 
+				&& material16.isSolid() 
+				&& material17.isSolid() 
+				&& material18.isSolid() 
+				&& material19.isSolid() 
+				&& material20.isSolid() 
+				&& material21.isSolid()
+				
+				/*&& world.getHeightValue(x + 2, z + 0) == y
+				&& world.getHeightValue(x + 0, z + 2) == y
+				&& world.getHeightValue(x - 2, z + 0) == y
+				&& world.getHeightValue(x + 0, z - 2) == y*/)
 		{
 			int xCoord = x;
 			int yCoord = y;

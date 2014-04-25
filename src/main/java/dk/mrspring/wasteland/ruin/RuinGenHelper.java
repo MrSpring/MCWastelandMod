@@ -7,7 +7,7 @@ public class RuinGenHelper
 {
 	protected static World worldObj;
 	
-	public static void setCube(int baseX, int baseY, int baseZ, int lengthX, int lengthY, int lengthZ, World world, Block block)
+	public static void setCube(int baseX, int baseY, int baseZ, int lengthX, int lengthY, int lengthZ, Block block)
 	{
 		for(int y = 0; y < lengthY; y++)
 		{
@@ -15,7 +15,7 @@ public class RuinGenHelper
 			{
 				for(int x = 0; x < lengthZ; x++)
 				{
-					world.setBlock(x + baseX, y + baseY, z + baseZ, block);
+					setBlock(x + baseX, y + baseY, z + baseZ, block);
 				}
 			}
 		}
